@@ -678,6 +678,11 @@ footer .privacy-note button {
 }
 
 @media (max-width: 850px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+  }
+
   .hero-image {
     background-size: auto 100%;
     background-position: 62% center;
@@ -803,6 +808,7 @@ footer .privacy-note button {
 @media (min-width: 851px) {
   .history .history-copy {
     width: 50%;
+    margin-right: 6vw;
     padding-right: 4vw;
     padding-left: 4vw;
   }
@@ -860,6 +866,10 @@ footer .privacy-note button {
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.86);
   }
 
+  .hero-content {
+    padding: 164px 25px 50px;
+  }
+
   .history {
     min-height: 0;
   }
@@ -877,8 +887,16 @@ footer .privacy-note button {
   .history .history-story {
     padding: 18px 18px 20px 20px;
     background:
-      linear-gradient(rgba(38, 8, 6, 0.5), rgba(38, 8, 6, 0.62)),
+      linear-gradient(
+        90deg,
+        rgba(24, 6, 5, 0.08) 0%,
+        rgba(50, 9, 7, 0.44) 42%,
+        rgba(50, 9, 7, 0.94) 76%,
+        rgba(50, 9, 7, 0.98) 100%
+      ),
+      linear-gradient(0deg, rgba(24, 6, 5, 0.42), rgba(24, 6, 5, 0.08)),
       url("assets/images/fundador-olicios.png") 70% center / cover no-repeat;
+    background-color: #320907;
   }
 
   .history .history-story p {
@@ -921,7 +939,7 @@ footer .privacy-note button {
   .experience-content {
     display: flex;
     flex-direction: column;
-    padding: 80px 25px;
+    padding: 64px 25px;
     justify-content: center;
   }
 
