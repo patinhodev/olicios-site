@@ -815,3 +815,54 @@ footer .privacy-note button {
     display: none;
   }
 }
+
+/* Enquadramentos editoriais específicos para telas de celular. */
+@media (max-width: 850px) {
+  .hero-image {
+    background-position: 80% center;
+    background-size: auto 100%;
+  }
+
+  .history {
+    min-height: 1080px;
+  }
+
+  .history .founder-photo {
+    background-image:
+      linear-gradient(
+        0deg,
+        #2d0806 0%,
+        rgba(45, 8, 6, 0.96) 24%,
+        rgba(45, 8, 6, 0.72) 48%,
+        rgba(24, 6, 5, 0.12) 100%
+      ),
+      url("assets/images/fundador-olicios.png");
+    background-position: 56% top;
+    background-size: auto 100%;
+  }
+
+  .history .history-copy {
+    min-height: 1080px;
+    padding: 390px 25px 64px;
+  }
+
+  .experience {
+    min-height: 680px;
+  }
+
+  .experience-photo {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(10, 24, 17, 0.9) 0%,
+        rgba(10, 24, 17, 0.52) 52%,
+        rgba(10, 24, 17, 0.3) 100%
+      ),
+      url("assets/images/granja-comary-cbf.png") center / auto 100% no-repeat,
+      #101c15;
+  }
+
+  .experience-content {
+    padding: 80px 25px;
+  }
+}

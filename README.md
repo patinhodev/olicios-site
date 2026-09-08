@@ -79,13 +79,13 @@ O GitHub Actions repete essas verificações automaticamente em cada envio e pul
 
 ## Google Analytics
 
-O Analytics permanece inativo até que o visitante aceite os cookies e um identificador GA4 válido seja informado em `frontend/analytics-config.js`:
+O Google Analytics 4 está configurado com o identificador público de medição do restaurante. A tag permanece bloqueada até que o visitante aceite os cookies e é carregada por `frontend/privacy-consent.js`:
 
 ```js
-window.OLICIOS_ANALYTICS_ID = "G-XXXXXXXXXX";
+window.OLICIOS_ANALYTICS_ID = "G-XCHBB8TYF6";
 ```
 
-Não publique chaves secretas no repositório. O identificador público de medição `G-...` não é uma chave secreta.
+Os sinais de publicidade e personalização permanecem desativados. O identificador de medição `G-...` é público e não representa uma chave secreta.
 
 ## Implantação
 
