@@ -1,0 +1,16 @@
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /build
+COPY backend/pom.xml backend/pom.xml
+RUN mvn -f backend/pom.xml -q -DskipTests dependency:go-offline
+COPY backend backend
+COPY frontend backend/src/main/resources/static
+RUN mvn -f backend/pom.xml -q -DskipTests package
+
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
+RUN addgroup -S olicios && adduser -S olicios -G olicios
+COPY --from=build /build/backend/target/olicios-site.jar /app/olicios-site.jar
+RUN chown -R olicios:olicios /app
+USER olicios
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/app/olicios-site.jar"]

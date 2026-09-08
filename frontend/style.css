@@ -1,0 +1,480 @@
+:root {
+  --wine: #59150f;
+  --dark: #250908;
+  --cream: #f3eadc;
+  --paper: #fffaf2;
+  --gold: #d4a24f;
+  --ink: #18110e;
+  --line: #cbbca8;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+.header {
+  height: 106px;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  padding: 14px 5vw;
+  border-bottom: 1px solid #ffffff4d;
+  color: #fff;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: inherit;
+  text-decoration: none;
+  margin-right: auto;
+}
+.brand img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+}
+.brand strong,
+.brand small {
+  display: block;
+}
+.brand strong {
+  font:
+    600 26px "Playfair Display",
+    serif;
+}
+.brand small {
+  margin-top: 5px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+.header nav {
+  display: flex;
+  gap: 28px;
+}
+.header nav a,
+.header-cta {
+  color: inherit;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.header-cta {
+  padding: 16px 21px;
+  border: 1px solid #ffffffa8;
+}
+.menu-button {
+  display: none;
+}
+.hero {
+  height: 900px;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.hero-image,
+.hero-shade {
+  position: absolute;
+  inset: 0;
+}
+.hero-image {
+  background: url("assets/images/proximo-granja-comary.png") center/cover;
+}
+.hero-shade {
+  background:
+    linear-gradient(90deg, #160504ed, #250b09c9 42%, #1a080633 75%),
+    linear-gradient(0deg, #1605049c, transparent 48%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 220px 8vw 80px;
+  max-width: 820px;
+}
+.overline {
+  margin: 0 0 22px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.wine {
+  color: var(--wine);
+}
+.gold {
+  color: var(--gold);
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  line-height: 0.94;
+}
+h1 {
+  font-size: clamp(64px, 8vw, 118px);
+  letter-spacing: -0.055em;
+}
+h1 em {
+  color: var(--gold);
+}
+.hero-lead {
+  max-width: 570px;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 30px 0;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.button {
+  display: inline-block;
+  padding: 17px 23px;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+.button-gold {
+  background: var(--gold);
+  color: #1b100a;
+}
+.button-light {
+  background: #fff;
+  color: var(--wine);
+}
+.text-link,
+.arrow-link {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+.text-link {
+  color: #fff;
+}
+.arrow-link {
+  color: var(--wine);
+}
+.hero-year {
+  position: absolute;
+  right: 6vw;
+  bottom: 55px;
+  z-index: 2;
+  text-align: right;
+}
+.hero-year span,
+.hero-year strong {
+  display: block;
+}
+.hero-year span {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+}
+.hero-year strong {
+  font:
+    600 44px "Playfair Display",
+    serif;
+  color: var(--gold);
+}
+.intro {
+  padding: 140px 8vw;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 9vw;
+  align-items: end;
+}
+.intro h2,
+.section-title h2,
+.history h2,
+.experience h2,
+.contact h2 {
+  font-size: clamp(45px, 5vw, 76px);
+  letter-spacing: -0.045em;
+}
+.intro-grid > div {
+  font-size: 17px;
+  line-height: 1.8;
+}
+.menu-section {
+  padding: 125px 5vw;
+  background: var(--dark);
+  color: #fff;
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0 3vw 60px;
+}
+.section-title > p {
+  max-width: 390px;
+  color: #d8c9bc;
+}
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 440px 390px;
+  gap: 14px;
+}
+.food-card {
+  position: relative;
+  overflow: hidden;
+}
+.food-card-large {
+  grid-row: span 2;
+}
+.food-card:last-child {
+  grid-column: span 2;
+}
+.food-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+.food-card:hover img {
+  transform: scale(1.04);
+}
+.food-card:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #170604e8, transparent 62%);
+}
+.food-card > div {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  bottom: 26px;
+}
+.food-card span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+}
+.food-card h3 {
+  font-size: 42px;
+}
+.food-card p {
+  margin: 8px 0 0;
+  color: #e5d8cd;
+}
+.history {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  min-height: 790px;
+  background: var(--wine);
+  color: #fff;
+}
+.founder-photo {
+  background: url("assets/images/fundador-olicios.png") center 25% / cover no-repeat;
+}
+.history-copy {
+  align-self: center;
+  padding: 95px 7vw;
+}
+.history-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 32px;
+}
+.history-copy p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #f2dfd7;
+}
+.history-copy strong {
+  display: block;
+  margin-top: 36px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+.experience {
+  min-height: 750px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.experience-photo {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #132015ed, #132015b5 48%, #13201531),
+    url("assets/images/ambiente.jpg") center/cover;
+}
+.experience-content {
+  position: relative;
+  z-index: 2;
+  padding: 100px 8vw;
+  max-width: 740px;
+}
+.experience-content p:not(.overline) {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.contact {
+  padding: 140px 8vw;
+  background: var(--cream);
+}
+.contact-list {
+  border-top: 1px solid var(--line);
+  margin-top: 65px;
+}
+.contact-list > div {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 35px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+.contact-list span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+.contact-list strong,
+.contact-list a {
+  font-size: 18px;
+  color: var(--ink);
+  text-decoration: none;
+}
+footer {
+  padding: 35px 5vw;
+  background: #160a08;
+  color: #e9dacb;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+footer p {
+  margin: auto;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+footer > a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 10px;
+}
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.footer-brand img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+}
+.footer-brand strong,
+.footer-brand small {
+  display: block;
+}
+.footer-brand small {
+  font-size: 9px;
+  color: var(--gold);
+}
+@media (max-width: 850px) {
+  .header {
+    height: 84px;
+    padding: 10px 20px;
+  }
+  .brand img {
+    width: 58px;
+    height: 58px;
+  }
+  .header nav,
+  .header-cta {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+    border: 1px solid #fff8;
+    background: transparent;
+    color: #fff;
+    padding: 11px;
+  }
+  .menu-open .header nav {
+    display: flex;
+    position: absolute;
+    top: 84px;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: #250908;
+    flex-direction: column;
+  }
+  .hero {
+    height: 780px;
+  }
+  .hero-content {
+    padding: 180px 25px 70px;
+  }
+  .intro,
+  .contact {
+    padding: 90px 25px;
+  }
+  .intro-grid,
+  .history {
+    grid-template-columns: 1fr;
+  }
+  .menu-section {
+    padding: 85px 18px;
+  }
+  .section-title {
+    display: block;
+    margin: 0 7px 38px;
+  }
+  .food-grid {
+    display: block;
+  }
+  .food-card {
+    height: 390px;
+    margin-bottom: 12px;
+  }
+  .food-card-large {
+    height: 500px;
+  }
+  .founder-photo {
+    min-height: 520px;
+  }
+  .history-copy,
+  .experience-content {
+    padding: 80px 25px;
+  }
+  .contact-list > div {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  footer p,
+  footer > a {
+    display: none;
+  }
+}

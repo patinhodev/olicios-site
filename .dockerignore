@@ -1,0 +1,12 @@
+.git
+.github
+.idea
+.vscode
+backend/target
+node_modules
+.npm-cache
+docs
+reports
+*.log
+README.md
+SECURITY.md

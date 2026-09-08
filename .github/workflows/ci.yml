@@ -1,0 +1,65 @@
+name: Integração contínua
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    name: Frontend e qualidade
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v6
+      - name: Configurar Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - name: Instalar dependências
+        run: npm ci
+      - name: Validar formatação, referências e segurança básica
+        run: npm run check
+      - name: Auditar dependências npm
+        run: npm audit --audit-level=high
+
+  backend:
+    name: Java e Maven
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v6
+      - name: Configurar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Compilar e executar testes
+        run: mvn --batch-mode --file backend/pom.xml verify
+
+  container:
+    name: Imagem Docker
+    runs-on: ubuntu-latest
+    needs: [frontend, backend]
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v6
+      - name: Construir imagem
+        run: docker build --tag olicios-site:ci .
+      - name: Validar execução do site
+        run: |
+          docker run --detach --name olicios-site-ci --publish 8080:8080 olicios-site:ci
+          trap 'docker rm --force olicios-site-ci' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent http://localhost:8080/ --output index.html; then
+              grep --quiet "Restaurante Olicio's" index.html
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs olicios-site-ci
+          exit 1

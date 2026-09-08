@@ -1,0 +1,59 @@
+.brand {
+  gap: 0;
+}
+.brand strong {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 0.95;
+  white-space: nowrap;
+}
+.brand-prefix {
+  padding: 5px 8px;
+  border: 1px solid #d4a24f;
+  border-radius: 999px;
+  color: #f0bd62;
+  font:
+    700 9px "DM Sans",
+    sans-serif;
+  letter-spacing: 0.18em;
+  transform: rotate(-2deg);
+}
+.brand-title {
+  font:
+    600 clamp(29px, 2.2vw, 42px) "Playfair Display",
+    serif;
+  letter-spacing: 0.025em;
+}
+.brand small {
+  margin-top: 9px;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+.brand small b {
+  color: #d4a24f;
+}
+.footer-brand {
+  gap: 0;
+}
+.footer-brand strong {
+  font:
+    600 26px "Playfair Display",
+    serif;
+}
+@media (max-width: 850px) {
+  .brand strong {
+    gap: 7px;
+  }
+  .brand-prefix {
+    padding: 4px 6px;
+    font-size: 7px;
+  }
+  .brand-title {
+    font-size: 27px;
+  }
+  .brand small {
+    margin-top: 7px;
+    font-size: 8px;
+  }
+}

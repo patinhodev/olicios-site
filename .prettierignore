@@ -1,0 +1,4 @@
+backend/target/
+frontend/assets/images/
+node_modules/
+reports/

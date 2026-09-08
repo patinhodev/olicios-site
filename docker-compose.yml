@@ -1,0 +1,11 @@
+name: olicios-site-final
+services:
+  web:
+    build:
+      context: .
+      no_cache: true
+    image: olicios-site-final:latest
+    container_name: olicios-site-final
+    ports:
+      - "8282:8080"
+    restart: unless-stopped

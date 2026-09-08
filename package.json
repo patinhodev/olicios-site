@@ -1,0 +1,19 @@
+{
+  "name": "olicios-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Site institucional do Restaurante Olicio's.",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node scripts/check-site.mjs",
+    "security:check": "node scripts/security-check.mjs",
+    "check": "npm run format:check && npm test && npm run security:check"
+  },
+  "devDependencies": {
+    "prettier": "3.9.6"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

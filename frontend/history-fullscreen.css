@@ -1,0 +1,115 @@
+.history {
+  position: relative;
+  display: block;
+  min-height: 1060px;
+  padding: 80px 5vw;
+  overflow: hidden;
+  background: #250908;
+  color: #fff;
+}
+.history::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  right: 5vw;
+  bottom: 80px;
+  left: 47%;
+  background: linear-gradient(
+    90deg,
+    rgba(50, 9, 7, 0),
+    rgba(50, 9, 7, 0.96) 24%,
+    #320907 100%
+  );
+  pointer-events: none;
+}
+.history .founder-photo {
+  position: absolute;
+  inset: 80px 5vw;
+  min-height: 0;
+  background-color: #320907;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(24, 6, 5, 0.08) 0%,
+      rgba(50, 9, 7, 0.44) 42%,
+      rgba(50, 9, 7, 0.94) 76%,
+      rgba(50, 9, 7, 0.98) 100%
+    ),
+    linear-gradient(0deg, rgba(24, 6, 5, 0.42), rgba(24, 6, 5, 0.08)),
+    url("assets/images/fundador-olicios.png");
+  background-position: -620px center;
+  background-size: auto 118%;
+  background-repeat: no-repeat;
+  filter: sepia(0.18) contrast(1.04);
+}
+.history .history-copy {
+  position: relative;
+  z-index: 2;
+  width: min(760px, 51vw);
+  margin-left: auto;
+  min-height: 900px;
+  padding: 100px 3vw 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+}
+.history .history-logo {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 32px;
+}
+.history .history-copy h2 {
+  font-size: clamp(52px, 4.5vw, 78px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  max-width: 760px;
+}
+.history .history-copy p {
+  max-width: 620px;
+  font-size: 18px;
+  line-height: 1.75;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+}
+@media (max-width: 850px) {
+  .history {
+    min-height: 900px;
+    padding: 0;
+  }
+  .history::after {
+    display: none;
+  }
+  .history .founder-photo {
+    inset: 0;
+    background-image:
+      linear-gradient(
+        0deg,
+        rgba(45, 8, 6, 0.98) 10%,
+        rgba(45, 8, 6, 0.78) 60%,
+        rgba(24, 6, 5, 0.24) 100%
+      ),
+      url("assets/images/fundador-olicios.png");
+    background-position: 38% 18%;
+    background-size: auto 106%;
+  }
+  .history .history-copy {
+    width: 100%;
+    min-height: 900px;
+    margin: 0;
+    padding: 330px 25px 70px;
+    justify-content: flex-end;
+  }
+  .history .history-copy h2 {
+    font-size: 43px;
+    line-height: 1.07;
+    letter-spacing: -0.025em;
+  }
+  .history .history-logo {
+    width: 72px;
+    height: 72px;
+  }
+  .history .history-copy p {
+    font-size: 17px;
+  }
+}

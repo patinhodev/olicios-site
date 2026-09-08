@@ -1,0 +1,30 @@
+# Java / Maven
+backend/target/
+*.class
+*.jar
+
+# Node / frontend tooling
+node_modules/
+.npm-cache/
+npm-debug.log*
+
+# IDEs and operating systems
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Environment and deployment state
+.env
+.env.*
+!.env.example
+.vercel/
+
+# Reports and temporary files
+coverage/
+reports/
+dependency-check-report.*
+*.log
+*.tmp
+*.swp
