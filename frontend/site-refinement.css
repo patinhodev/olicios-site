@@ -926,7 +926,7 @@ footer .privacy-note button {
       ),
       linear-gradient(0deg, rgba(24, 6, 5, 0.42), rgba(24, 6, 5, 0.08)),
       url("assets/images/fundador-olicios.png");
-    background-position: left center;
+    background-position: right center;
     background-size: cover;
     background-repeat: no-repeat;
     filter: sepia(0.18) contrast(1.04);
