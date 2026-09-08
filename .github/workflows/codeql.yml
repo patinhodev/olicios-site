@@ -27,7 +27,15 @@ jobs:
         uses: github/codeql-action/init@v4
         with:
           languages: ${{ matrix.language }}
-      - name: Compilar automaticamente
-        uses: github/codeql-action/autobuild@v4
+      - name: Configurar Java 21
+        if: matrix.language == 'java-kotlin'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Compilar Java com Maven
+        if: matrix.language == 'java-kotlin'
+        run: mvn --batch-mode --file backend/pom.xml clean package -DskipTests
       - name: Executar análise
         uses: github/codeql-action/analyze@v4
