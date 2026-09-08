@@ -887,7 +887,7 @@ footer .privacy-note button {
   .history .history-story {
     position: relative;
     isolation: isolate;
-    overflow: visible;
+    overflow: hidden;
     padding: 18px 18px 20px 20px;
     background: #320907;
   }
@@ -897,7 +897,6 @@ footer .privacy-note button {
     position: absolute;
     z-index: 0;
     inset: 0;
-    left: -25px;
     background-image:
       linear-gradient(
         90deg,
@@ -909,7 +908,7 @@ footer .privacy-note button {
       linear-gradient(0deg, rgba(24, 6, 5, 0.42), rgba(24, 6, 5, 0.08)),
       url("assets/images/fundador-olicios.png");
     background-position: left center;
-    background-size: auto 118%;
+    background-size: cover;
     background-repeat: no-repeat;
     filter: sepia(0.18) contrast(1.04);
   }
