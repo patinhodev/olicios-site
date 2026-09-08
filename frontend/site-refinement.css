@@ -809,10 +809,21 @@ footer .privacy-note button {
     left: 18px;
     right: 18px;
     bottom: 18px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 9px;
   }
 
   .event-card-copy small {
-    display: none;
+    display: inline-flex;
+    min-height: 32px;
+    padding: 8px 10px;
+    align-items: center;
+    border: 1px solid rgba(212, 162, 79, 0.72);
+    background: rgba(20, 5, 4, 0.7);
+    font-size: 9px;
+    line-height: 1;
+    white-space: nowrap;
   }
 }
 
