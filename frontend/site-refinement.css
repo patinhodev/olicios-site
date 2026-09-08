@@ -642,6 +642,39 @@ footer .privacy-note button {
   color: #fff !important;
 }
 
+.contact-list .event-contact-button {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 15px 20px;
+  border: 1px solid var(--wine);
+  background: var(--wine);
+  color: #fff !important;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+
+.contact-list .event-contact-button strong {
+  color: inherit;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+.contact-list .event-contact-button small {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.contact-list .event-contact-button:hover,
+.contact-list .event-contact-button:focus-visible {
+  background: transparent;
+  color: var(--wine) !important;
+}
+
 .future-menu {
   margin: 70px 3vw 0;
   padding: 36px 0;
