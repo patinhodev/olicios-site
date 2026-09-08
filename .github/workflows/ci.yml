@@ -63,3 +63,18 @@ jobs:
           done
           docker logs olicios-site-ci
           exit 1
+      - name: Construir imagem destinada à Vercel
+        run: docker build --file Dockerfile.vercel --tag olicios-site:vercel-ci .
+      - name: Validar execução da imagem destinada à Vercel
+        run: |
+          docker run --detach --name olicios-site-vercel-ci --publish 8081:8080 olicios-site:vercel-ci
+          trap 'docker rm --force olicios-site-vercel-ci' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent http://localhost:8081/ --output index-vercel.html; then
+              grep --quiet "Restaurante Olicio's" index-vercel.html
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs olicios-site-vercel-ci
+          exit 1

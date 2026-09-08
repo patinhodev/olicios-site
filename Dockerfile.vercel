@@ -13,4 +13,4 @@ COPY --from=build /build/backend/target/olicios-site.jar /app/olicios-site.jar
 RUN chown -R olicios:olicios /app
 USER olicios
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "/app/olicios-site.jar"]
+CMD ["/opt/java/openjdk/bin/java", "-jar", "/app/olicios-site.jar"]
