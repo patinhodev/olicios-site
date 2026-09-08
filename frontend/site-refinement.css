@@ -830,7 +830,8 @@ footer .privacy-note button {
 /* Enquadramentos editoriais específicos para telas de celular. */
 @media (max-width: 850px) {
   .hero-image {
-    background-position: 70% center;
+    /* Mantém a fachada visível, mas leva a placa para fora da área do título. */
+    background-position: 62% center;
     background-size: auto 100%;
   }
 
@@ -838,15 +839,21 @@ footer .privacy-note button {
     background:
       linear-gradient(
         90deg,
-        rgba(22, 5, 4, 0.97) 0%,
-        rgba(30, 9, 7, 0.9) 58%,
-        rgba(26, 8, 6, 0.5) 100%
+        rgba(22, 5, 4, 0.78) 0%,
+        rgba(30, 9, 7, 0.58) 58%,
+        rgba(26, 8, 6, 0.2) 100%
       ),
-      linear-gradient(0deg, rgba(22, 5, 4, 0.68), transparent 52%);
+      linear-gradient(0deg, rgba(22, 5, 4, 0.48), transparent 52%);
+  }
+
+  .hero-content h1,
+  .hero-content .overline,
+  .hero-content .hero-lead {
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.86);
   }
 
   .history {
-    min-height: 1080px;
+    min-height: 940px;
   }
 
   .history .founder-photo {
@@ -859,17 +866,21 @@ footer .privacy-note button {
         rgba(24, 6, 5, 0.12) 100%
       ),
       url("assets/images/fundador-olicios.png");
-    background-position: 62% bottom;
-    background-size: auto 68%;
+    /* Retrato menor e concentrado na metade inferior, atrás do texto corrido. */
+    background-position: 54% bottom;
+    background-size: auto 46%;
   }
 
   .history .history-copy {
-    min-height: 1080px;
-    padding: 390px 25px 64px;
+    min-height: 940px;
+    padding: 64px 25px;
+    justify-content: flex-start;
   }
 
   .experience {
-    min-height: 680px;
+    /* A altura passa a ser definida pelo conteúdo e pelo mesmo respiro nos dois lados. */
+    min-height: 0;
+    align-items: stretch;
   }
 
   .experience-photo {
@@ -885,7 +896,10 @@ footer .privacy-note button {
   }
 
   .experience-content {
+    display: flex;
+    flex-direction: column;
     padding: 80px 25px;
+    justify-content: center;
   }
 
   .food-card span {
