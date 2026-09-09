@@ -54,7 +54,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20260904-final41" />
+    <link rel="stylesheet" href="style.css?v=20260909-menu-icon" />
     <link rel="stylesheet" href="history-fullscreen.css?v=20260904-final41" />
     <link rel="stylesheet" href="brand-cleanup.css?v=20260904-final41" />
     <link rel="stylesheet" href="site-refinement.css?v=20260908-history19" />
@@ -69,11 +69,17 @@
         ></a
       ><button
         class="menu-button"
-        onclick="document.body.classList.toggle('menu-open')"
+        type="button"
+        aria-label="Abrir navegação"
+        aria-controls="site-navigation"
+        aria-expanded="false"
+        onclick="const open = document.body.classList.toggle('menu-open'); this.setAttribute('aria-expanded', String(open)); this.setAttribute('aria-label', open ? 'Fechar navegação' : 'Abrir navegação')"
       >
-        MENU
+        <span class="menu-icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
       </button>
-      <nav>
+      <nav id="site-navigation">
         <a href="#casa">A casa</a><a href="#sabores">Pratos</a
         ><a href="#historia">História</a><a href="#eventos">Eventos</a
         ><a
