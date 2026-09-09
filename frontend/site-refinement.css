@@ -376,10 +376,6 @@ body:has(.gallery-dialog-fallback[open])::after {
   grid-row: auto;
 }
 
-.food-grid .food-card:nth-child(n + 4) {
-  grid-column: span 3;
-}
-
 .experience-photo {
   inset: 0 5vw;
   background:
