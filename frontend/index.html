@@ -8,7 +8,7 @@
       content="Olicio's: churrasco, pizzas e fondue em Teresópolis desde 1988."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://olicios-site.vercel.app/" />
+    <meta property="og:url" content="https://olicios-site.pages.dev/" />
     <meta
       property="og:title"
       content="Restaurante Olicio's | Em Teresópolis desde 1988"
@@ -19,7 +19,7 @@
     />
     <meta
       property="og:image"
-      content="https://olicios-site.vercel.app/assets/images/capa-fachada-candidata.webp"
+      content="https://olicios-site.pages.dev/assets/images/capa-fachada-candidata.webp"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -32,7 +32,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://olicios-site.vercel.app/assets/images/capa-fachada-candidata.webp"
+      content="https://olicios-site.pages.dev/assets/images/capa-fachada-candidata.webp"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
@@ -73,7 +73,14 @@
         aria-label="Abrir navegação"
         aria-controls="site-navigation"
         aria-expanded="false"
-        onclick="const open = document.body.classList.toggle('menu-open'); this.setAttribute('aria-expanded', String(open)); this.setAttribute('aria-label', open ? 'Fechar navegação' : 'Abrir navegação')"
+        onclick="
+          const open = document.body.classList.toggle('menu-open');
+          this.setAttribute('aria-expanded', String(open));
+          this.setAttribute(
+            'aria-label',
+            open ? 'Fechar navegação' : 'Abrir navegação',
+          );
+        "
       >
         <span class="menu-icon" aria-hidden="true">
           <span></span><span></span><span></span>
@@ -458,9 +465,14 @@
         personalizados.
       </p>
       <p>
-        Links para WhatsApp, Instagram e Waze abrem serviços externos com políticas
-        próprias. As mensagens enviadas ao Olicio's pelo WhatsApp são utilizadas para
-        atendimento.
+        Ao entrar em contato pelo WhatsApp, seu nome, telefone e o conteúdo da conversa
+        serão utilizados pelo Restaurante Olicio's exclusivamente para atender pedidos,
+        reservas ou solicitações. Esses dados não serão utilizados para enviar promoções
+        sem sua autorização.
+      </p>
+      <p>
+        WhatsApp, Instagram e Waze são serviços externos e possuem políticas de
+        privacidade próprias.
       </p>
       <button class="privacy-preferences" id="review-cookie-consent" type="button">
         Revisar cookies
