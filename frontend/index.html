@@ -73,14 +73,6 @@
         aria-label="Abrir navegação"
         aria-controls="site-navigation"
         aria-expanded="false"
-        onclick="
-          const open = document.body.classList.toggle('menu-open');
-          this.setAttribute('aria-expanded', String(open));
-          this.setAttribute(
-            'aria-label',
-            open ? 'Fechar navegação' : 'Abrir navegação',
-          );
-        "
       >
         <span class="menu-icon" aria-hidden="true">
           <span></span><span></span><span></span>
@@ -478,6 +470,7 @@
         Revisar cookies
       </button>
     </dialog>
+    <script src="site-navigation.js?v=20260909"></script>
     <script src="events-gallery.js?v=20260907"></script>
     <script src="privacy-consent.js?v=20260908"></script>
   </body>
