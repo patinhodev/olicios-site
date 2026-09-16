@@ -26,9 +26,11 @@ git commit -m "Preparar site do Olicio's para produção"
 
 Adicione o repositório remoto informado pelo GitHub e envie a branch principal somente depois de revisar `git status`.
 
-## Vercel
+## Cloudflare Pages
 
-A Vercel utiliza `Dockerfile.vercel`. O Spring Boot lê automaticamente a variável `PORT` fornecida pelo ambiente.
+O site de produção é hospedado no Cloudflare Pages. Publique o conteúdo da pasta `frontend` e mantenha o arquivo `frontend/_headers`, que define os cabeçalhos de segurança aplicados pelo Cloudflare.
+
+Após cada envio para a branch principal, acompanhe o deploy no painel do Cloudflare Pages e valide a URL de produção.
 
 Depois da implantação, valide:
 
