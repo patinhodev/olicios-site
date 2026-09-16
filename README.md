@@ -8,26 +8,26 @@ Site institucional do Restaurante Olicio's, em Teresópolis/RJ. A aplicação ut
 - HTML5, CSS3 e JavaScript sem framework.
 - Maven para construção e testes do backend.
 - Docker e Docker Compose para execução local.
+- Cloudflare Pages para hospedagem de produção.
 - Prettier para padronização do frontend e da documentação.
 - GitHub Actions para integração contínua e análise de segurança.
 
 ## Estrutura
 
 ```text
-.
-├── .github/                 Workflows e automação do GitHub
-├── backend/                 Aplicação Java/Spring Boot
-│   └── src/
-│       ├── main/            Código e configuração da aplicação
-│       └── test/            Testes automatizados
-├── docs/                    Arquitetura, implantação e segurança
-├── frontend/                Site estático e ativos de produção
-│   └── assets/images/       Imagens utilizadas pelo site
-├── scripts/                 Validações locais reproduzíveis
-├── Dockerfile               Imagem para execução local
-├── Dockerfile.vercel        Imagem destinada à Vercel
-├── docker-compose.yml       Orquestração local
-└── package.json             Ferramentas de qualidade do frontend
+olicios/
+  .github/          Workflows do GitHub
+  backend/          Aplicação Java/Spring Boot
+    src/
+      main/         Código e configuração
+      test/         Testes automatizados
+  docs/             Arquitetura e implantação
+  frontend/         Site estático e ativos
+    assets/images/  Imagens do site
+  scripts/          Validações locais
+  Dockerfile        Execução local
+  docker-compose.yml Orquestração local
+  package.json      Ferramentas do frontend
 ```
 
 ## Pré-requisitos
